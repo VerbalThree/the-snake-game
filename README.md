@@ -1,1 +1,1 @@
-# the-snake-game-
+# the-snake-game
