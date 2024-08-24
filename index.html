@@ -7,5 +7,41 @@
     </head>
     <body>
         <canvas id="gameCanvas" width="360" height="360"></canvas>
+
+        <script>
+
+            // Colour Variables
+            const CANVAS_BORDER_COLOUR = 'black';
+            const CANVAS_BACKGROUND_COLOUR = 'white';
+            const SNAKE_COLOUR = 'lightgreen';
+            const SNAKE_BORDER_COLOUR = 'darkgreen';
+
+            // Canvas variable
+            const canvas = document.getElementById("gameCanvas");
+
+            // 2D Context
+            const ctx = canvas.getContext("2d");
+
+            /*
+            * Change the background colour of the canvas to CANVAS_BACKGROUND_COLOUR 
+            * and draw a border arount it with CANVAS_BORDER_COLOUR
+            */
+
+            function clearcanvas(){
+                
+                // Select the colour to fill the drawing
+                ctx.fillStyle = CANVAS_BACKGROUND_COLOUR;
+
+                // Select the colour fot the border of the canvas
+                ctx.strokeStyle = CANVAS_BORDER_COLOUR;
+                
+                // Draw a "filled" rectangle to cover the entire canvas
+                ctx.fillRect(0,0,canvas.width,canvas.height);
+
+                // Draw a "border" around the entire canvas
+                ctx.strokeRect(0,0,canvas.width,canvas.height);
+
+            }
+        </script>
     </body>
 </html>
